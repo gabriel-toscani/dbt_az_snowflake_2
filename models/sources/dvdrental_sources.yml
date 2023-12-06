@@ -1,0 +1,229 @@
+version: 2
+
+sources:
+  - name: raw_dvdrental
+    description: ""
+    database: northwind
+    schema: raw_dvdrental
+    tables:
+      - name: actor
+        description: ""
+        columns:
+          - name: actor_id
+            description: ""
+          - name: first_name
+            description: ""
+          - name: last_name
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: address
+        description: ""
+        columns:
+          - name: address_id
+            description: ""
+          - name: address
+            description: ""
+          - name: address2
+            description: ""
+          - name: district
+            description: ""
+          - name: city_id
+            description: ""
+          - name: postal_code
+            description: ""
+          - name: phone
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: category
+        description: ""
+        columns:
+          - name: category_id
+            description: ""
+          - name: name
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: city
+        description: ""
+        columns:
+          - name: city_id
+            description: ""
+          - name: city
+            description: ""
+          - name: country_id
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: country
+        description: ""
+        columns:
+          - name: country_id
+            description: ""
+          - name: country
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: customer
+        description: ""
+        columns:
+          - name: customer_id
+            description: ""
+          - name: store_id
+            description: ""
+          - name: first_name
+            description: ""
+          - name: last_name
+            description: ""
+          - name: email
+            description: ""
+          - name: address_id
+            description: ""
+          - name: activebool
+            description: ""
+          - name: create_date
+            description: ""
+          - name: last_update
+            description: ""
+          - name: active
+            description: ""
+
+      - name: film
+        description: ""
+        columns:
+          - name: film_id
+            description: ""
+          - name: title
+            description: ""
+          - name: description
+            description: ""
+          - name: release_year
+            description: ""
+          - name: language_id
+            description: ""
+          - name: rental_duration
+            description: ""
+          - name: rental_rate
+            description: ""
+          - name: length
+            description: ""
+          - name: replacement_cost
+            description: ""
+          - name: rating
+            description: ""
+          - name: last_update
+            description: ""
+          - name: special_features
+            description: ""
+          - name: fulltext
+            description: ""
+
+      - name: film_actor
+        description: ""
+        columns:
+          - name: actor_id
+            description: ""
+          - name: film_id
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: film_category
+        description: ""
+        columns:
+          - name: film_id
+            description: ""
+          - name: category_id
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: inventory
+        description: ""
+        columns:
+          - name: inventory_id
+            description: ""
+          - name: film_id
+            description: ""
+          - name: store_id
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: payment
+        description: ""
+        columns:
+          - name: payment_id
+            description: ""
+          - name: customer_id
+            description: ""
+          - name: staff_id
+            description: ""
+          - name: rental_id
+            description: ""
+          - name: amount
+            description: ""
+          - name: payment_date
+            description: ""
+
+      - name: rental
+        description: ""
+        columns:
+          - name: rental_id
+            description: ""
+          - name: rental_date
+            description: ""
+          - name: inventory_id
+            description: ""
+          - name: customer_id
+            description: ""
+          - name: return_date
+            description: ""
+          - name: staff_id
+            description: ""
+          - name: last_update
+            description: ""
+
+      - name: staff
+        description: ""
+        columns:
+          - name: staff_id
+            description: ""
+          - name: first_name
+            description: ""
+          - name: last_name
+            description: ""
+          - name: address_id
+            description: ""
+          - name: email
+            description: ""
+          - name: store_id
+            description: ""
+          - name: active
+            description: ""
+          - name: username
+            description: ""
+          - name: password
+            description: ""
+          - name: last_update
+            description: ""
+          - name: picture
+            description: ""
+
+      - name: store
+        description: ""
+        columns:
+          - name: store_id
+            description: ""
+          - name: manager_staff_id
+            description: ""
+          - name: address_id
+            description: ""
+          - name: last_update
+            description: ""
