@@ -1,0 +1,322 @@
+version: 2
+
+sources:
+  - name: northwind
+    description: ""
+    database: northwind
+    schema: raw_northwind
+    tables:
+      - name: _order_
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: customerid
+            data_type: varchar
+            description: ""
+          - name: employeeid
+            data_type: number
+            description: ""
+          - name: orderdate
+            data_type: date
+            description: ""
+          - name: requireddate
+            data_type: date
+            description: ""
+          - name: shippeddate
+            data_type: date
+            description: ""
+          - name: shipvia
+            data_type: number
+            description: ""
+          - name: freight
+            data_type: number
+            description: ""
+          - name: shipname
+            data_type: varchar
+            description: ""
+          - name: shipaddress
+            data_type: varchar
+            description: ""
+          - name: shipcity
+            data_type: varchar
+            description: ""
+          - name: shipregion
+            data_type: varchar
+            description: ""
+          - name: shippostalcode
+            data_type: varchar
+            description: ""
+          - name: shipcountry
+            data_type: varchar
+            description: ""
+
+      - name: category
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: categoryname
+            data_type: varchar
+            description: ""
+          - name: description
+            data_type: varchar
+            description: ""
+
+      - name: customer
+        description: ""
+        columns:
+          - name: id
+            data_type: varchar
+            description: ""
+          - name: companyname
+            data_type: varchar
+            description: ""
+          - name: contactname
+            data_type: varchar
+            description: ""
+          - name: contacttitle
+            data_type: varchar
+            description: ""
+          - name: address
+            data_type: varchar
+            description: ""
+          - name: city
+            data_type: varchar
+            description: ""
+          - name: region
+            data_type: varchar
+            description: ""
+          - name: postalcode
+            data_type: varchar
+            description: ""
+          - name: country
+            data_type: varchar
+            description: ""
+          - name: phone
+            data_type: varchar
+            description: ""
+          - name: fax
+            data_type: varchar
+            description: ""
+
+      - name: employee
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: lastname
+            data_type: varchar
+            description: ""
+          - name: firstname
+            data_type: varchar
+            description: ""
+          - name: title
+            data_type: varchar
+            description: ""
+          - name: titleofcourtesy
+            data_type: varchar
+            description: ""
+          - name: birthdate
+            data_type: date
+            description: ""
+          - name: hiredate
+            data_type: date
+            description: ""
+          - name: address
+            data_type: varchar
+            description: ""
+          - name: city
+            data_type: varchar
+            description: ""
+          - name: region
+            data_type: varchar
+            description: ""
+          - name: postalcode
+            data_type: varchar
+            description: ""
+          - name: country
+            data_type: varchar
+            description: ""
+          - name: homephone
+            data_type: varchar
+            description: ""
+          - name: extension
+            data_type: number
+            description: ""
+          - name: photo
+            data_type: varchar
+            description: ""
+          - name: notes
+            data_type: varchar
+            description: ""
+          - name: reportsto
+            data_type: number
+            description: ""
+          - name: photopath
+            data_type: varchar
+            description: ""
+
+      - name: employeeterritory
+        description: ""
+        columns:
+          - name: id
+            data_type: varchar
+            description: ""
+          - name: employeeid
+            data_type: number
+            description: ""
+          - name: territoryid
+            data_type: number
+            description: ""
+
+      - name: orderdetail
+        description: ""
+        columns:
+          - name: id
+            data_type: varchar
+            description: ""
+          - name: orderid
+            data_type: number
+            description: ""
+          - name: productid
+            data_type: number
+            description: ""
+          - name: unitprice
+            data_type: number
+            description: ""
+          - name: quantity
+            data_type: number
+            description: ""
+          - name: discount
+            data_type: number
+            description: ""
+
+      - name: product
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: productname
+            data_type: varchar
+            description: ""
+          - name: supplierid
+            data_type: number
+            description: ""
+          - name: categoryid
+            data_type: number
+            description: ""
+          - name: quantityperunit
+            data_type: varchar
+            description: ""
+          - name: unitprice
+            data_type: number
+            description: ""
+          - name: unitsinstock
+            data_type: number
+            description: ""
+          - name: unitsonorder
+            data_type: number
+            description: ""
+          - name: reorderlevel
+            data_type: number
+            description: ""
+          - name: discontinued
+            data_type: number
+            description: ""
+
+      - name: region
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: regiondescription
+            data_type: varchar
+            description: ""
+
+      - name: shipper
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: companyname
+            data_type: varchar
+            description: ""
+          - name: phone
+            data_type: varchar
+            description: ""
+
+      - name: supplier
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: companyname
+            data_type: varchar
+            description: ""
+          - name: contactname
+            data_type: varchar
+            description: ""
+          - name: contacttitle
+            data_type: varchar
+            description: ""
+          - name: address
+            data_type: varchar
+            description: ""
+          - name: city
+            data_type: varchar
+            description: ""
+          - name: region
+            data_type: varchar
+            description: ""
+          - name: postalcode
+            data_type: varchar
+            description: ""
+          - name: country
+            data_type: varchar
+            description: ""
+          - name: phone
+            data_type: varchar
+            description: ""
+          - name: fax
+            data_type: varchar
+            description: ""
+          - name: homepage
+            data_type: varchar
+            description: ""
+
+      - name: territory
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: territorydescription
+            data_type: varchar
+            description: ""
+          - name: regionid
+            data_type: number
+            description: ""
+
+      - name: us_states
+        description: ""
+        columns:
+          - name: state_id
+            data_type: number
+            description: ""
+          - name: state_name
+            data_type: varchar
+            description: ""
+          - name: state_abbr
+            data_type: varchar
+            description: ""
+          - name: state_region
+            data_type: varchar
+            description: ""
