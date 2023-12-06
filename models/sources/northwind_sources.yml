@@ -320,3 +320,9 @@ sources:
           - name: state_region
             data_type: varchar
             description: ""
+      - name: table
+        description: ""
+        columns:
+          - name: state_id
+            data_type: number
+
