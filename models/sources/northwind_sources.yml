@@ -304,10 +304,3 @@ sources:
           - name: regionid
             data_type: number
             description: ""
-
-      - name: table2
-        description: ""
-        columns:
-          - name: id
-            data_type: number
-            description: ""
