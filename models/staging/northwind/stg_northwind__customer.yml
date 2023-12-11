@@ -1,0 +1,40 @@
+models:
+  - name: stg_northwind__customer
+    description: ""
+    columns:
+      - name: id
+        data_type: varchar
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: companyname
+        data_type: varchar
+        description: ""
+      - name: contactname
+        data_type: varchar
+        description: ""
+      - name: contacttitle
+        data_type: varchar
+        description: ""
+      - name: address
+        data_type: varchar
+        description: ""
+      - name: city
+        data_type: varchar
+        description: ""
+      - name: region
+        data_type: varchar
+        description: ""
+      - name: postalcode
+        data_type: varchar
+        description: ""
+      - name: country
+        data_type: varchar
+        description: ""
+      - name: phone
+        data_type: varchar
+        description: ""
+      - name: fax
+        data_type: varchar
+        description: ""

@@ -8,6 +8,10 @@ sources:
     tables:
       - name: _order_
         description: ""
+        freshness: # default freshness
+          warn_after: {count: 3000, period: day}
+          error_after: {count: 4000, period: day}
+        loaded_at_field: cast(orderdate as timestamp)
         columns:
           - name: id
             data_type: number
