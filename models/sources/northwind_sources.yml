@@ -308,3 +308,8 @@ sources:
           - name: regionid
             data_type: number
             description: ""
+      - name: orders_big
+        freshness: # default freshness
+          warn_after: {count: 5, period: minute}
+          error_after: {count: 10, period: minute}
+        loaded_at_field: extraction_date
