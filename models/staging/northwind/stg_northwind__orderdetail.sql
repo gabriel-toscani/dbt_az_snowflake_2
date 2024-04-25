@@ -14,8 +14,7 @@ renamed as (
         productid,
         unitprice,
         quantity,
-        discount,
-        {{ cents_to_dollars("unitprice", scale=0) }}
+        discount
 
     from source
 
