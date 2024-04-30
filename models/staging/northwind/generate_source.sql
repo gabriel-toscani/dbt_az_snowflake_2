@@ -1,0 +1,1 @@
+{{ codegen.generate_source(schema_name= 'raw_northwind', database_name= 'northwind', generate_columns = 'true') }}
