@@ -2,10 +2,225 @@ version: 2
 
 sources:
   - name: northwind
-    database: northwind  
     schema: raw_northwind
+    database: northwind
     tables:
       - name: _order_
+        description: This is the table for the orders on Northwind ERP.
+        freshness:
+          warn_after:
+            count: 10000
+            period: day
+          error_after:
+            count: 15000
+            period: day
+        loaded_at_field: cast(orderdate as timestamp)
+        columns:
+          - name: id
+            description: This is the primary key of the table
+            data_type: varchar
+            tests:
+              - unique
+              - not_null
+          - name: customerid
+            data_type: varchar
+            tests:
+              - relationships:
+                  to: ref('stg_northwind__customer')
+                  field: id
+          - name: employeeid
+            data_type: varchar
+          - name: orderdate
+            data_type: varchar
+          - name: requireddate
+            data_type: varchar
+          - name: shippeddate
+            data_type: varchar
+          - name: shipvia
+            data_type: varchar
+          - name: freight
+            data_type: varchar
+          - name: shipname
+            data_type: varchar
+          - name: shipaddress
+            data_type: varchar
+          - name: shipcity
+            data_type: varchar
+          - name: shipregion
+            data_type: varchar
+          - name: shippostalcode
+            data_type: varchar
+          - name: shipcountry
+            data_type: varchar
+
+      - name: category
+        columns:
+          - name: id
+            data_type: varchar
+          - name: categoryname
+            data_type: varchar
+          - name: description
+            data_type: varchar
+
       - name: customer
+        columns:
+          - name: id
+            data_type: varchar
+          - name: companyname
+            data_type: varchar
+          - name: contactname
+            data_type: varchar
+          - name: contacttitle
+            data_type: varchar
+          - name: address
+            data_type: varchar
+          - name: city
+            data_type: varchar
+          - name: region
+            data_type: varchar
+          - name: postalcode
+            data_type: varchar
+          - name: country
+            data_type: varchar
+          - name: phone
+            data_type: varchar
+          - name: fax
+            data_type: varchar
+
+      - name: employee
+        columns:
+          - name: id
+            data_type: varchar
+          - name: lastname
+            data_type: varchar
+          - name: firstname
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: titleofcourtesy
+            data_type: varchar
+          - name: birthdate
+            data_type: varchar
+          - name: hiredate
+            data_type: varchar
+          - name: address
+            data_type: varchar
+          - name: city
+            data_type: varchar
+          - name: region
+            data_type: varchar
+          - name: postalcode
+            data_type: varchar
+          - name: country
+            data_type: varchar
+          - name: homephone
+            data_type: varchar
+          - name: extension
+            data_type: varchar
+          - name: photo
+            data_type: varchar
+          - name: notes
+            data_type: varchar
+          - name: reportsto
+            data_type: varchar
+          - name: photopath
+            data_type: varchar
+
+      - name: employeeterritory
+        columns:
+          - name: id
+            data_type: varchar
+          - name: employeeid
+            data_type: varchar
+          - name: territoryid
+            data_type: varchar
+
       - name: orderdetail
+        columns:
+          - name: id
+            data_type: varchar
+          - name: orderid
+            data_type: varchar
+          - name: productid
+            data_type: varchar
+          - name: unitprice
+            data_type: varchar
+          - name: quantity
+            data_type: varchar
+          - name: discount
+            data_type: varchar
+
       - name: product
+        columns:
+          - name: id
+            data_type: varchar
+          - name: productname
+            data_type: varchar
+          - name: supplierid
+            data_type: varchar
+          - name: categoryid
+            data_type: varchar
+          - name: quantityperunit
+            data_type: varchar
+          - name: unitprice
+            data_type: varchar
+          - name: unitsinstock
+            data_type: varchar
+          - name: unitsonorder
+            data_type: varchar
+          - name: reorderlevel
+            data_type: varchar
+          - name: discontinued
+            data_type: varchar
+
+      - name: region
+        columns:
+          - name: id
+            data_type: varchar
+          - name: regiondescription
+            data_type: varchar
+
+      - name: shipper
+        columns:
+          - name: id
+            data_type: varchar
+          - name: companyname
+            data_type: varchar
+          - name: phone
+            data_type: varchar
+
+      - name: supplier
+        columns:
+          - name: c1
+            data_type: varchar
+          - name: c2
+            data_type: varchar
+          - name: c3
+            data_type: varchar
+          - name: c4
+            data_type: varchar
+          - name: c5
+            data_type: varchar
+          - name: c6
+            data_type: varchar
+          - name: c7
+            data_type: varchar
+          - name: c8
+            data_type: varchar
+          - name: c9
+            data_type: varchar
+          - name: c10
+            data_type: varchar
+          - name: c11
+            data_type: varchar
+          - name: c12
+            data_type: varchar
+
+      - name: territory
+        columns:
+          - name: id
+            data_type: varchar
+          - name: territorydescription
+            data_type: varchar
+          - name: regionid
+            data_type: varchar
