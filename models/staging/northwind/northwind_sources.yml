@@ -28,8 +28,8 @@ sources:
               - relationships:
                   to: ref('stg_northwind__customer')
                   field: id
-                  config:
-                    severity: warn
+#                  config:
+#                    severity: warn
           - name: employeeid
             data_type: varchar
           - name: orderdate
