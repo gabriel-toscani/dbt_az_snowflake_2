@@ -1,3 +1,5 @@
+{{config(materialized='incremental', unique_key='id')}}
+
 with 
 
 source as (
@@ -25,7 +27,6 @@ renamed as (
         shipcountry
 
     from source
-
 )
 
 select * from renamed

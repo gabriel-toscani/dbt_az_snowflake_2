@@ -1,4 +1,4 @@
-{{config(error_if = '>50', warn_if = '>30')}}
+{{ config(error_if = '>50', warn_if = '>20') }}
 
 with
     orderdetail as (
