@@ -18,6 +18,9 @@ renamed as (
 
     from source
 
+    {% if env_var("DBT_TARGET_SCHEMA") == 'prod' %}
+    limit 100
+    {%endif%}
 )
 
 select * from renamed
