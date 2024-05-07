@@ -26,7 +26,7 @@ renamed as (
         shippostalcode,
         shipcountry
 
-    from 
+    from renamed
 )
 
 select * from renamed

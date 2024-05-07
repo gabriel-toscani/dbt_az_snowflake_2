@@ -19,8 +19,10 @@ renamed as (
     from source
 
     {% if env_var("DBT_TARGET_SCHEMA") == 'prod' %}
-    limit 100
-    {%endif%}
+
+    where reference_date >= current_date() - 'INTERVAL 7 DAYS'
+    
+    {% endif %}
 
 )
 
