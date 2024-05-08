@@ -5,5 +5,6 @@ with
     )
 
 select 
-    *
+    row_number() over(order by id desc) as customer_sk
+    , *
 from customers
