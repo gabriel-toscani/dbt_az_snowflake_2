@@ -55,6 +55,8 @@ sources:
           - name: shipcountry
             data_type: varchar
 
+      - name: orders_full
+
       - name: category
         columns:
           - name: id
