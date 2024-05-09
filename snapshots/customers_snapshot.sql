@@ -9,6 +9,7 @@
         )
     }}
 
-    select * from {{ source('northwind', 'customer') }}
+    select * 
+    from {{ source('northwind', 'customer') }}
 
 {% endsnapshot %}
