@@ -1,7 +1,7 @@
 with 
     orders_and_details as (
         select *
-        from {{ref('int_order_and_detail')}}
+        from {{ref('join_order_and_detail')}}
     )
 
     , us_states as (
