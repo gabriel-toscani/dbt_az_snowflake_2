@@ -37,5 +37,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
+    +materialized: view
     staging:
         +materialized: ephemeral
+
+seeds:
+  my_new_project:
+    quote_columns: true
+    delimiter: "|"

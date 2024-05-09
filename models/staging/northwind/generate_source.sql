@@ -1,3 +1,1 @@
-{{ codegen.generate_model_yaml(
-    model_names=['dim_customers']
-) }}
+{{ codegen.generate_source(schema_name= 'raw_northwind', database_name= 'norhtwind', table_names = ['orders_full'], generate_columns = true) }}
