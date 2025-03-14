@@ -1,6 +1,6 @@
 with 
     product as (
-        select *
+        select *, col1
         from {{ref('dim_products')}}
     )
 
