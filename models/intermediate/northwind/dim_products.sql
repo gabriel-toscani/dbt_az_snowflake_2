@@ -1,7 +1,7 @@
 with
     products as (
         select *
-        from {{ref('stg_northwind__customer')}}
+        from {{ref('stg_northwind__product')}}
     )
 
 select 
