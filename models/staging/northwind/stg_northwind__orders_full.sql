@@ -1,5 +1,6 @@
 {{ config(materialized = 'incremental'
-        , unique_key = 'new_id') }}
+        , unique_key = 'new_id'
+        , cluster_by = ['shipcountry', 'orderdate']) }}
 
 with 
 
